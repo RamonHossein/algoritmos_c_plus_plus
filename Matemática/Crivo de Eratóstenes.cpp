@@ -41,12 +41,12 @@ using namespace std;
 bitset<10000010> bs;
 
 /*
-Vetor onde serão armazenados os números primos.
+	Vetor onde serão armazenados os números primos.
 */
 vector<int> numeros_primos;
 
 /*
-Tamanho o valor analisado pelo Crivo de Eratostenes.
+	Tamanho o valor analisado pelo Crivo de Eratostenes.
 */
 long long tamanho_crivo;
 
