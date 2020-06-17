@@ -51,10 +51,10 @@ void crivo_eratostenes(long long valor_analisado) {
 	for(long long i = 2; i < tamanho_crivo; ++i) {
 
 		if(bs[i]) {
-			// Descartar os valores multiplos de i começando por (i * i)
+
 			for(long long j = (i * i); j < tamanho_crivo; j += i)
 				bs[j] = 0;
-			// Adiciona o valor primo verificado a lista.
+
 			numeros_primos.push_back((int)i);			
 		}
 	}
