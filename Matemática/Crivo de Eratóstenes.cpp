@@ -1,7 +1,7 @@
 /*
 	Crivo de Eratóstenes
 	
-	O Crivo de Eratóstenes é um algoritmo simples e prático criado para encontrar números primos até um valor limite.
+	O Crivo de Eratóstenes é um algoritmo simples e prático criado para encontrar números primos até um valor limite (valor_analisado).
 	
 	Funcionamento e exemplo de números de 1 à 30:
 	
@@ -29,29 +29,22 @@
 	Lista de primos de 1 à 30 é [2, 3, 5, 7, 11, 13, 17, 19, 23, 29].
 */
 
-#include <iostream>
-#include <bitset>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-/*
-	Tamanho maximo dos números que serão analisado (10^7)
-*/
+// Tamanho maximo dos números que serão analisado (10^7)
 bitset<10000010> bs;
 
-/*
-	Vetor onde serão armazenados os números primos.
-*/
+// Vetor onde serão armazenados os números primos.
 vector<int> numeros_primos;
 
-/*
-	Tamanho o valor analisado pelo Crivo de Eratostenes.
-*/
+// Tamanho o valor analisado pelo Crivo de Eratostenes.
 long long tamanho_crivo;
 
 /*
-	Determinar o número de primos em um dado intervalo de forma eficiente.
+	O método "crivo_eratostenes" preenchera a variável "numeros_primos" no intervalo de "valor_analisado" de forma 
+	eficiente.
 */
 void crivo_eratostenes(long long valor_analisado) {
 	
@@ -73,9 +66,10 @@ void crivo_eratostenes(long long valor_analisado) {
 }
 
 /*
-	O metodo "is_prime" verifica se um determinado número é primo baseando-se no algoritmo do "crivo_eratostenes".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "is_prime".
+	O método "is_prime" retorna "true" caso o "valor_analisado" (baseado no algoritmo do "crivo_eratostenes) seja um 
+	número primo.
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "is_prime".
 */
 bool is_prime(long long valor_analisado) {
 

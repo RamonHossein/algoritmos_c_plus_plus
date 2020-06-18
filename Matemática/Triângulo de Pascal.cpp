@@ -1,54 +1,52 @@
 /*
-	Triangulo de Pascal
-	
-	É um triangulo aritmético infinito onde são dispostos os coeficientes das expansões binomiais (n, k).
-	
-	Relação de Stifel: Cada número do Triangulo de Pascal é igual à soma do número imediatamente acima e do antecessor
-	do número acima.
-	
-	A soma de uma linha no Triangulo de Pascal é igual a (2^n).
-	
-	A soma de uma coluna no Triangulo de Pascal pode ser calculada pela relação (n + k + 1) / (n + 1).
-	
-	A soma de uma diagonal no Triangulo de Pascal pode ser calculada pela relação (n + k + 1) / (k).
-	
-	Em toda a coluna central do Triangulo de Pascal o produto de dois dos seus elementos é maior que o produto de dois 
-	elementos quaisquer pertencente a mesma coluna.
-	
-	Exemplo de Triangulo de Pascal (padrão)
+	Triângulo de Pascal
 
-	    1
-	   1 1
-	  1 2 1
-	 1 3 3 1
-	1 4 6 4 1
+	É um triângulo aritmético infinito onde são dispostos os coeficientes das expansões binomiais (n, k).
+
+	Obs: Relação de Stifel: Cada número do triângulo de Pascal é igual a soma do número imediatamente acima e do seu 
+	antecessor.
 	
-	Exemplo de Triangulo de Pascal (matriz)
+	Obs: A soma de uma linha 'n' no triângulo de Pascal é igual a (2^n).
 	
-	1 1 1 1 1
-	0 1 2 3 4
-	0 0 1 3 6
-	0 0 0 1 4
-	0 0 0 0 1
+	Obs: A soma de uma coluna no triângulo de Pascal pode ser calculada pela relação (n + k + 1) / (n + 1).
+	
+	Obs: A soma de uma diagonal no triângulo de Pascal pode ser calculada pela relação (n + k + 1) / (k).
+	
+	Obs: Em toda a coluna central do triângulo de Pascal o produto de dois de seus elementos é maior que o produto de
+	dois elementos quaiquer pertencente a mesma coluna.
+	
+	
+	Exemplo: Triângulo de Pascal (padrão)
+
+		    1
+		   1 1
+		  1 2 1
+		 1 3 3 1
+		1 4 6 4 1
+	
+	Exemplo: Triângulo de Pascal (matriz)
+	
+		1 1 1 1 1
+		0 1 2 3 4
+		0 0 1 3 6
+		0 0 0 1 4
+		0 0 0 0 1
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 
-/*
-	Tamanho maxímo do Triangulo de Pascal.
-*/
+// Tamanho maxímo do triângulo de Pascal.
 #define maxn 5
 
 using namespace std;
 
-/*
-	Matriz onde deverão ser armazenado os valores do Triangulo de Pascal.
-*/
+// A variável "triangulo" armazenará os valores do triângulo de Pascal.
 int triangulo[maxn][maxn];
 
 /*
-	Calculo do triãngulo de Pascal de ordem (maxn - 1).
-	triangulo[c][k] = valor da combinação C(n, k), ode k > n.
+	O método "triangulo_pascal" preenchera a variável "triangulo" na ordem de (maxn - 1).
+	
+	O "triangulo[c][k]" é igual ao valor da combinação C(n, k) onde k > n.
 */
 void triangulo_pascal() {
 		

@@ -1,34 +1,27 @@
 /*
 	Fatores Primos
 	
-	Os Fatore primos de um número inteiro positivo são os números 'primos' que dividem esse inteiro de forma exata.
+	Os fatores primos de um número inteiro positivo são os números "primos" que dividem esse inteiro de forma exata.
 	
 	Exemplo: fatoracao(18) = [2, 3, 3], porque '2 * 3 * 3 = 18'.
 */
 
-#include <iostream>
-#include <bitset>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-/*
-	Tamanho maximo dos números que serão analisado (10^7).
-*/
+// Tamanho maximo dos números que serão analisado (10^7)
 bitset<10000010> bs;
 
-/*
-	Vetor onde serão armazenados os números primos.
-*/
+// Vetor onde serão armazenados os números primos.
 vector<int> numeros_primos;
 
-/*
-	Tamanho o valor analisado pelo Crivo de Eratostenes.
-*/
+// Tamanho o valor analisado pelo Crivo de Eratostenes.
 long long tamanho_crivo;
 
 /*
-	Determinar o número de primos em um dado intervalo de forma eficiente.
+	O método "crivo_eratostenes" preenchera a variável "numeros_primos" no intervalo de "valor_analisado" de forma 
+	eficiente.
 */
 void crivo_eratostenes(long long valor_analisado) {
 	
@@ -40,19 +33,20 @@ void crivo_eratostenes(long long valor_analisado) {
 	for(long long i = 2; i < tamanho_crivo; ++i) {
 
 		if(bs[i]) {
-			// Descartar os valores multiplos de i começando por (i * i)
+
 			for(long long j = (i * i); j < tamanho_crivo; j += i)
 				bs[j] = 0;
-			// Adiciona o valor primo verificado a lista.
+
 			numeros_primos.push_back((int)i);			
 		}
 	}
 }
 
 /*
-	Determina a fatoração em números primos de um determinado "valor_analisado".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "fatoracao".
+	O método "fatoracao" retorna um vetor contendo os números primos resultantes da fatoração do "valor_analisado".
+	número primo.
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "is_prime".
 */
 vector<int> fatoracao(long long valor_analisado) {
 	

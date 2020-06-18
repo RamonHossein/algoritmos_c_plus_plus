@@ -1,29 +1,27 @@
 /*
 	Algoritmo de Detecção de Ciclo de Floyd
 	
-	É um algoritmo de detecção de ciclo ou constatação de ciclo.
+	É um algoritmo de detecção de ciclos ou de constatação de ciclo.
 	
-	Dada uma função y = f(x) e um valor inicial x0, ele determina as características do cilco presente
-	na sequência (x0, f(x0), f(f(x0)), ... )
+	Dada uma função y = f(x) e um valor inicial x0, ele determina as caracteristicas do ciclo presente na
+	sequência (x0, f(x0), f(f(x0)), ... ) 
 */
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	O método "funcao_observada" é a função onde será verificada a existência de um ciclo.
+	O método "funcao_observada" retorna a função na qual será verificada a existência de ciclos. 
 */
 int funcao_observada(int x) {
 	
 	return (z * x + j) % m; 
 }
 
-
 /*
-	O método "floyd" retorna 'mu' e 'lambda' sendo:
-
+	O método "floyd" retorna os valores (mu, lambda), onde:
+	
 		- mu: O índice a partir do qual o ciclo se inicia.
 		- lambda: O tamanho do ciclo.
 */

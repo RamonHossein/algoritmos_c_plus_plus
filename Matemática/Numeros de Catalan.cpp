@@ -1,24 +1,24 @@
 /*
 	Números de Catalan
 	
-	Em combinatória os números de Catalan formam uma sequência de números naturais que ocorrem em vários problemas de 
+	Em combinatória os números de Catalan formam uma sequência de números naturais que ocorrem em vários problemas de
 	contagem, frequentemente envolvendo objetos definidos recursivamente.
 	
-	O algoritmo mostrado abaixo calcula a sequência de Catalan utilizando recursão.
+	Obs: O algoritmo mostrado abaixo cálcula a sequência de Catalan utilizando recursão.
 	
-	Sequência dos 10 primeiros números de Catalan: 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796
-	
-	Exemplo: Qual o número de maneiras de se dividir um polígono de (n + 2) lados, em n triângulos.
+	A sequência dos 10 primeiros números de Catalan: 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796.
+
+	Exemplo: Qual o número de maneiras de se dividir um polígono de (n + 2) lados em 'n' triângulos.
 	
 	Exemplo: Qual o número de árvores binárias que temos com (n + 1) folhas.
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	Calculo dos números de Catalan.
+	O método "catalan" retorna o número na sequência de Catalan definido na posição (number). 
 */
 int catalan(int number) {
 	

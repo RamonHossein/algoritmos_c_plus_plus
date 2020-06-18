@@ -1,19 +1,19 @@
 /*
 	Fibonacci
 	
-	O algoritmo de Fibonacci representa uma sequência de números inteiros, iniciados por 0 e 1, no qual, cada termo subsequente
-	corresponde à soma dos dois termos anteriores a ele.
+	O algoritmo de Fibonacci representa uma sequência de números inteiros, iniciados pelos valor 0 e 1, no qual, cada termo
+	subsequente corresponde à soma dos dois termos anteriores a ele.
 	
-	O algoritmo mostrado abaixo calcula a sequência de Fibonacci utilizando a fórmula de Binet.
+	Obs: O algoritmo mostrado abaixo calcula a sequência de Fibonacci utilizando a fórmula de Binet.
 */
 
-#include <iostream>
-#include <cmath>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	O método "fibonacci" retorna o número fibonacci da posição definida por "number".
+	O método "fibonacci" retorna o número na sequência de Fibonacci definido na posição (number). 
 */
 double fibonacci(int number) {
 

@@ -1,18 +1,17 @@
 /*
-	MDC - Maior Divisor Comum
+	MMC - Maior Divisor Comum
+
+	Determinar o maior divisor comum entre dois números inteiros positivos.
 	
-	Determinar o maior divisor comum entre dois números inteiros positivos "a" e "b".
-	
-	Se "mdc(a, b) == 1", então "a" e "b" são co-primos.
+	Obs: Se o método "mdc" retornar o valor '1', então os números (a, b) são co-primos.
 */
 
-#include <iostream>
-#include <cstdlib>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	Retorna o maior divisor comum dos inteiros "a" e 'b".
+	O método "mdc" retorna o maior divisor comum entre os números inteiros (a, b). 
 */
 inline int mdc(int a, int b) {
 	

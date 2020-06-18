@@ -1,16 +1,15 @@
 /*
 	MMC - Menor Multiplo Comum
-	
-	Determinar o menor multiplo comum entre dois números inteiros positivos "a" e "b".
+
+	Determinar o menor multiplo comum entre dois números inteiros positivos.
 */
 
-#include <iostream>
-#include <cstdlib>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	Retorna o maior divisor comum dos inteiros "a" e 'b".
+	O método "mdc" retorna o maior divisor comum entre os números inteiros (a, b). 
 */
 inline int mdc(int a, int b) {
 	
@@ -18,7 +17,7 @@ inline int mdc(int a, int b) {
 }
 
 /*
-	Retorna o menor multiplo comum dos inteiros "a" e 'b".
+	O método "mmc" retorna o menor multiplo comum entre os números inteiros (a, b).
 */
 inline long long mmc(int a, int b) {
 	

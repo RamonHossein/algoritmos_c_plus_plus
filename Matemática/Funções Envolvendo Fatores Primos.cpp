@@ -1,45 +1,37 @@
 /*
-	Funções Envolvendo Fatores Primos
+	Lista de Funções Envolvendo Fatores Primos
 	
-	- quantidade_fatores_primos: Retorna o número de fatores primos de um valor previamente escolhido.
+		1. Quantidade_fatores_primos: Retorna o número de fatores primos de um valor previamente escolhido.
 	
-	- quantidade_fatores_primos_diferentes: Retorna o número de fatores primos de um valor previamente escolhido que não 
-	se repetem.
+		2. Quantidade_fatores_primos_diferentes: Retorna o número de fatores primos de um valor previamente escolhido,
+		que não se repetem.
 	
-	- soma_fatores_primos: Retorna a soma dos fatores primos de um valor previamente escolhido.
+		3. soma_fatores_primos: Retorna a soma dos fatores primos de um valor previamente escolhido.
 	
-	- quantidade_divisores_valor: Retorna o número de divisores de um valor previamente escolhido.
+		4. quantidade_divisores_valor: Retorna o número de divisores de um valor previamente escolhido.
 	
-	- soma_divisores_valor: Retorna a soma dos divisores de um valor previamente escolhido.
+		5. soma_divisores_valor: Retorna a soma dos divisores de um valor previamente escolhido.
 	
-	- euler_phi: Retorna o número de inteiros positivos menores ou iguais a um valor previamente escolhido que são
-	co-primos deste mesmo valor.
+		6. euler_phi: Retorna o número de inteiros positivos menores ou iguais a um valor previamente escolhido que são
+		co-primos deste mesmo valor.
 */
 
-#include <iostream>
-#include <bitset>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-/*
-	Tamanho maximo dos números que serão analisado (10^7).
-*/
+// Tamanho maximo dos números que serão analisado (10^7)
 bitset<10000010> bs;
 
-/*
-	Vetor onde serão armazenados os números primos.
-*/
+// Vetor onde serão armazenados os números primos.
 vector<int> numeros_primos;
 
-/*
-	Tamanho o valor analisado pelo Crivo de Eratostenes.
-*/
+// Tamanho o valor analisado pelo Crivo de Eratostenes.
 long long tamanho_crivo;
 
 /*
-	Determinar o número de primos em um dado intervalo de forma eficiente.
+	O método "crivo_eratostenes" preenchera a variável "numeros_primos" no intervalo de "valor_analisado" de forma 
+	eficiente.
 */
 void crivo_eratostenes(long long valor_analisado) {
 	
@@ -61,9 +53,9 @@ void crivo_eratostenes(long long valor_analisado) {
 }
 
 /*
-	Retorna o número de fatores primos do "valor_analisado".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_fatores_primos".
+	O método "quantidade_fatores_primos" retorna o número de fatores primos do "valor_analisado".
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_fatores_primos".
 */
 long long quantidade_fatores_primos(long long valor_analisado) {
 	
@@ -89,9 +81,9 @@ long long quantidade_fatores_primos(long long valor_analisado) {
 }
 
 /*
-	Retorna o número de fatores primos do "valor_analisado" que não se repetem.
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_fatores_primos_diferentes".
+	O método "quantidade_fatores_primos_diferentes" retorna o número de fatores primos que não se repetem do "valor_analisado".
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_fatores_primos_diferentes".
 */
 long long quantidade_fatores_primos_diferentes(long long valor_analisado) {
 	
@@ -125,9 +117,9 @@ long long quantidade_fatores_primos_diferentes(long long valor_analisado) {
 }
 
 /*
-	Retorna a soma dos fatores primos do "valor_analisado".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "soma_fatores_primos".
+	O método "soma_fatores_primos" retorna a soma dos fatores primos do "valor_analisado".
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "soma_fatores_primos".
 */
 long long soma_fatores_primos(long long valor_analisado) {
 	
@@ -153,9 +145,9 @@ long long soma_fatores_primos(long long valor_analisado) {
 }
 
 /*
-	Retorna o número de divisores do "valor_analisado".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_divisores_valor".
+	O método "quantidade_divisores_valor" retorna o número de divisores do "valor_analisado".
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "quantidade_divisores_valor".
 */
 long long quantidade_divisores_valor(long long valor_analisado) {
 	
@@ -185,9 +177,9 @@ long long quantidade_divisores_valor(long long valor_analisado) {
 }
 
 /*
-	Retorna a soma dos divisores do "valor_analisado".
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "soma_divisores_valor".
+	O método "soma_divisores_valor" retorna a soma dos divisores do "valor_analisado".
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "soma_divisores_valor".
 */
 long long soma_divisores_valor(long long valor_analisado) {
 	
@@ -217,9 +209,10 @@ long long soma_divisores_valor(long long valor_analisado) {
 }
 
 /*
-	Retorna o número de inteiros positivos menores ou iguais ao "valor_analisado" que são co-primos deste mesmo valor.
-	
-	Observação: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "euler_phi".
+	O método "euler_phi" retorna o número de inteiros positivos menores ou iguais ao "valor_analisado" que são co-primos 
+	deste mesmo valor.
+
+	Obs: O algoritmo "crivo_eratostenes" dever ser executado antes do algoritmo "euler_phi".
 */
 long long euler_phi(long long valor_analisado) {
 	

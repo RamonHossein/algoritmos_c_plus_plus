@@ -8,31 +8,25 @@
 		
 	possui uma solução "x = x0". Além disso, um inteiro "x" será a solução do sistema se, e somente se, "x = x0 (mod m1 m2)".
 	
-	Exemplo de uso: Qual o menor número natural que dividido por 7 deixa resto 3 e quando dividido por 6 deixa resto 5.
+	Exemplo: Qual o menor número natural que dividido por 7 deixa resto 3 e quando dividido por 6 deixa resto 5.
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 
-/*
-	Tamanho maxímo de equações que poderão entrar na solução geral.
-*/
+// Tamanho maxímo das equações que poderão entrar na solução geral.
 #define maxn 1001
 
 using namespace std;
 
-/*
-	Número de casos.
-*/
+// Número de casos.
 int n;
 
-/*
-	Vetores onde deverão ser armazenado os valores "a" e "p" na equação "a (mod p)".
-*/
+// Vetores onde deverão ser armazenado os valores "a" e "p" na equação "a (mod p)".
 int a[maxn];
 int p[maxn];
 
 /*
-	Triple é uma estrutura criada para armazenar os valores do mdc(a, b) e os coeficiente x e y.
+	A struct "Triple" é utilizada para armazenar os valores do mdc(a, b) e os coeficiente x e y.
 */
 struct Triple {
 	
@@ -42,8 +36,8 @@ struct Triple {
 };
 
 /*
-	O algoritmo "euclides_mdc" recebe dois inteiros não negativos a e b e devolve uma "Triple" cuja primeira posição é o mdc(a,b), a segunda posição 
-	é o valor x e a terceira o valor y tais que a*x + b*y = mdc(a,b).
+	O método "euclides_mdc" recebe dois inteiros não negativos (a, b) e devolve uma "Triple" cuja primeira posição é o mdc(a, b), a segunda
+	posição é o valor de (x) e a terceira posição o valor de (y), tais que "ax + by = mdc(a, b) ". 
 */
 Triple euclides_mdc(int a, int b) {
 	
@@ -55,9 +49,9 @@ Triple euclides_mdc(int a, int b) {
 }
 
 /*
-	O algoritmo "inverso_modular" determina a solução da equação a * x = 1 (mod n).
+	O método "inverso_modular" retorna a solução da equação "a * x = 1 (mod n)".
 	
-	se "x == 0" então a equação não possuí solução.
+	Obs: se "x == 0" então a equação não possuí solução.
 */
 int inverso_modular(int a, int n) {
 	
@@ -73,7 +67,7 @@ int inverso_modular(int a, int n) {
 }
 
 /*
-	O algoritmo "teorema_chines_resto" determina a solução da equação x = a[i] (mod p[i]).
+	O método "teorema_chines_resto" retorna a solução da equação x = a[i] (mod p[i]).
 */
 int teorema_chines_resto() {
 

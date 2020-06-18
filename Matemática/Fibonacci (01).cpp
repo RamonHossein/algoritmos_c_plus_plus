@@ -1,18 +1,19 @@
 /*
 	Fibonacci
 	
-	O algoritmo de Fibonacci representa uma sequência de números inteiros, iniciados por 0 e 1, no qual, cada termo subsequente
-	corresponde à soma dos dois termos anteriores a ele.
+	O algoritmo de Fibonacci representa uma sequência de números inteiros, iniciados pelos valor 0 e 1, no qual, cada termo
+	subsequente corresponde à soma dos dois termos anteriores a ele.
 	
-	O algoritmo mostrado abaixo calcula a sequência de Fibonacci utilizando multiplicação e a potência de matriz.
+	Obs: O algoritmo mostrado abaixo calcula a sequência de Fibonacci utilizando multiplicação e potência de matriz.
 */
 
-#include <iostream>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-	Estrutura de dados utilizada nos cálculos do número de Fibonacci.
+	A struct "matrix" é utilizada como modelo na criação de matrizes (2x2).
 */
 struct matrix {
 	
@@ -20,7 +21,7 @@ struct matrix {
 };
 
 /*
-	O método "matrix_multiplicacao" calcula o produto das matrizes "a" e "b".
+	O método "matrix_multiplicacao" retorna o cálculo do produto entre as "a" e "b".
 */
 matrix matrix_multiplicacao(matrix a, matrix b) {
 	
@@ -43,7 +44,7 @@ matrix matrix_multiplicacao(matrix a, matrix b) {
 }
 
 /*
-	O método "matrix_potencia" cálcula a potência da matriz "base" sob o expoênte "p".
+	O método "matrix_potencia" retorna o cálculo da potência da matriz "base" sob o expoênte "p".
 */
 matrix matrix_potencia(matrix base, int p) {
 	
@@ -70,11 +71,10 @@ matrix matrix_potencia(matrix base, int p) {
 	return ans;
 }
 
-
 /*
-	O método "fibonacci" retorna o número fibonacci da posição definida por "number".
+	O método "fibonacci" retorna o número na sequência de Fibonacci definido na posição (number). 
 		
-	A matriz resultante em "fib" corresponde aos seguintes valores:
+	Obs: O método "fibonacci" calcula a matriz "fib" onde cada uma das suas posições corresponde aos seguintes valores:
 	
 		[fib(number + 1)] [fib(number)	  ]
 		[fib(number)	] [fib(number + 1)]
